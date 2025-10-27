@@ -1,6 +1,19 @@
 from django.shortcuts import render
-from .models import Cliente, Persona
 
-def lista_clientes(request):
-    clientes = Cliente.objects.select_related('dni').all()
-    return render(request, 'taller/lista_clientes.html', {'clientes': clientes})
+def inicio(request):
+    return render(request, 'taller/inicio.html')
+
+def acerca(request):
+    return render(request, 'taller/acerca.html')
+
+def servicios(request):
+    return render(request, 'taller/servicios.html')
+
+def contacto(request):
+    return render(request, 'taller/contacto.html')
+
+def cotizacion(request):
+    return render(request, 'taller/cotizacion.html')
+
+def login_empleados(request):
+    return render(request, 'taller/login.html')
